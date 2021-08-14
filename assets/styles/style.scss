@@ -1,0 +1,16 @@
+// Required elements loaded for override
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/variables";
+
+//Custom variables
+
+
+
+
+// Add all BS natives and overriden styles on my custom.css
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+// Additionnal custom styles
+
