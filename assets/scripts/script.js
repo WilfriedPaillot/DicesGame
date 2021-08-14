@@ -1,5 +1,6 @@
 // Variables declaration
 roundScore = 0;
+globalScore = 0;
 
 // New game function
 const newGame = document.getElementById('newGame').addEventListener('click', () => {
@@ -23,6 +24,11 @@ const roll = document.getElementById('roll').addEventListener('click', () => {
 
 // Hold function with globalScore's increment
 
+const hold = document.getElementById('hold').addEventListener('click', () => {
+    //globalScore += roundScore;
+    document.getElementById("globalScore").innerHTML = globalScore += roundScore;
+    roundScore = 0;
+})
 
 // Change player's functions with reset roundScore
 
