@@ -18,7 +18,7 @@ const roll = document.getElementById('roll').addEventListener('click', () => {
         roundScore = 0;
         // + next player
     }
-    console.log(roundScore);
+    document.getElementById("roundScore").innerHTML = roundScore;
 })
 
 // Hold function with globalScore's increment
