@@ -67,7 +67,7 @@ const hold = document.getElementById('hold').addEventListener('click', () => {
     
 })
 
-// Function to change player's variables
+// Function to change player
 function nextPlayer() {
     activePlayer = activePlayer === 1 ? 2 : 1;
 }

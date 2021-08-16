@@ -8,15 +8,50 @@
     <title>Dices game</title>
 </head>
 <body>
+
+    <section class="container text-center">
+        <div class="row">
+            <button type="button" class="btn btn-outline-primary" id="newGame">New Game</button>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-4">
+                <h1 class="" id="player1">Player 1</h1>
+                <span class="" id="globalScore1">0</span>
+            </div>
+            <div class="col-lg-4">
+                <span class="" id="value">0</span> DICE
+            </div>
+            <div class="col-lg-4">
+                <h1 class="" id="player2">Player 2</h1>
+                <span class="" id="globalScore2">0</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <p>Current</p>
+                <span id="roundScore1">0</span>
+            </div>
+            <div class="col-lg-4">
+                <button class="btn btn-outline-primary" id="roll">Roll</button>
+                <button class="btn btn-outline-primary" id="hold">Hold</button>
+            </div>
+            <div class="col-lg-4">
+                <p>Current</p>
+                <span id="roundScore2">0</span>
+            </div>
+        </div>
+
+
+    </section>
     
-    <button id="newGame">New Game</button>
+    <!-- <button id="newGame">New Game</button>
     <button id="roll">Roll</button>
     <span id="value"></span>
 
 
     <button id="hold">Hold</button>
-
-    <!-- <h6 id="activePlayer"></h6> -->
 
     <div>
         <h5 id="player1">Player 1</h5>
@@ -32,7 +67,7 @@
         <div id="roundScore2"></div>
         <h6>globalScore</h6>
         <div id="globalScore2"></div>
-    </div>
+    </div> -->
 
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/scripts/script.js"></script>
