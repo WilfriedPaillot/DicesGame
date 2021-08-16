@@ -5,41 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <title>Dices game</title>
 </head>
 <body>
 
-    <section class="container text-center">
-        <div class="row">
-            <button type="button" class="btn btn-outline-primary" id="newGame">New Game</button>
+    <section class="container">
+        <div class="row-cols-12 text-center my-5">
+                <button type="button" class="btn" id="newGame"><i class="bi bi-plus-circle text-danger "></i>New Game</button>   
         </div>
         
         <div class="row">
             <div class="col-lg-4">
-                <h1 class="" id="player1">Player 1</h1>
-                <span class="" id="globalScore1">0</span>
+                <h1 class="" id="player1">Player 1<i class="bi bi-dot text-danger"></i></h1>
+                <span class="text-danger fw-light fs-1" id="globalScore1">0</span>
             </div>
             <div class="col-lg-4">
                 <span class="" id="value">0</span> DICE
             </div>
             <div class="col-lg-4">
                 <h1 class="" id="player2">Player 2</h1>
-                <span class="" id="globalScore2">0</span>
+                <span class="text-danger fw-light fs-1" id="globalScore2">0</span>
             </div>
         </div>
 
         <div class="row">
             <div class="col-lg-4">
-                <p>Current</p>
-                <span id="roundScore1">0</span>
+                <section class="bg-danger w-50 text-center">
+                    <p class="fw-bold ">Current</p>
+                    <span class="text-white" id="roundScore1">0</span>                    
+                </section>
             </div>
             <div class="col-lg-4">
-                <button class="btn btn-outline-primary" id="roll">Roll</button>
-                <button class="btn btn-outline-primary" id="hold">Hold</button>
+                <div class="buttons d-flex flex-column justify-content-center">
+                    <button class="btn" id="roll"><i class="bi bi-arrow-repeat text-danger"></i>Roll</button>
+                    <button class="btn" id="hold"><i class="bi bi-box-arrow-in-down text-danger"></i>Hold</button>                    
+                </div>
+
             </div>
             <div class="col-lg-4">
-                <p>Current</p>
-                <span id="roundScore2">0</span>
+                <section class="bg-danger w-50 text-center">
+                    <p class="fw-bold ">Current</p>
+                    <span class="text-white" id="roundScore2">0</span>
+                </section>
             </div>
         </div>
 
