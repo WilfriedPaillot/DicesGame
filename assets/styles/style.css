@@ -11268,8 +11268,19 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.actived {
-  color: red;
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+section {
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.unactive {
+  color: gainsboro;
 }
 
 .dice {
@@ -11277,7 +11288,7 @@ textarea.form-control-lg {
   width: 100px;
   height: 100px;
   background: #f1f1f1;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   top: 40%;
   left: 50%;
   transform: translate(-50%, -40%);
