@@ -11271,17 +11271,19 @@ textarea.form-control-lg {
 body {
   height: 100vh;
   width: 100%;
+  position: relative;
 }
 
-section {
+.container {
   position: relative;
-  top: 40%;
+  height: 90%;
+  top: 50%;
   transform: translateY(-50%);
 }
-section.firstPlayer {
+.container.firstPlayer {
   background: linear-gradient(to right, #f7f5f0 50%, #fff 50%);
 }
-section.secondPlayer {
+.container.secondPlayer {
   background: linear-gradient(to left, #f7f5f0 50%, #fff 50%);
 }
 

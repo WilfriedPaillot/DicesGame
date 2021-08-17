@@ -85,16 +85,16 @@ function changePlayerStyle() {
     if (activePlayer === 1 ) {
         document.getElementById('player2').classList.add('unactive');
         document.getElementById('player1').classList.remove('unactive');
-        document.getElementById('section').classList.add('firstPlayer');
-        document.getElementById('section').classList.remove('secondPlayer');    
+        document.getElementById('bgActivePlayer').classList.add('firstPlayer');
+        document.getElementById('bgActivePlayer').classList.remove('secondPlayer');    
         document.getElementById('player2dot').classList.add('visually-hidden');
         document.getElementById('player1dot').classList.remove('visually-hidden');   
     }
     else {
         document.getElementById('player2').classList.remove('unactive');
         document.getElementById('player1').classList.add('unactive');
-        document.getElementById('section').classList.remove('firstPlayer');
-        document.getElementById('section').classList.add('secondPlayer');
+        document.getElementById('bgActivePlayer').classList.remove('firstPlayer');
+        document.getElementById('bgActivePlayer').classList.add('secondPlayer');
         document.getElementById('player2dot').classList.remove('visually-hidden');
         document.getElementById('player1dot').classList.add('visually-hidden');
     }

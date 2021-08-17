@@ -17,11 +17,14 @@ $btn-focus-box-shadow: none;
 body {
     height: 100vh;
     width: 100%;
+    position: relative;
 }
 
-section {
+.container {
     position: relative;
-    top: 40%;
+    // background: #000;
+    height: 90%;
+    top: 50%;
     transform: translateY(-50%);
         &.firstPlayer {
             background: linear-gradient(to right, rgb(247, 245, 240) 50%, #fff 50%);
