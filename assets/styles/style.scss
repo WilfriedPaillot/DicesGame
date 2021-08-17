@@ -17,3 +17,14 @@
 .actived {
     color: red;
 }
+
+.dice {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: #f1f1f1;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
