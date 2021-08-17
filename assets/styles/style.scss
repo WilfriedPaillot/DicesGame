@@ -22,6 +22,12 @@ section {
     position: relative;
     top: 40%;
     transform: translateY(-50%);
+        &.firstPlayer {
+            background: linear-gradient(to right, rgb(247, 245, 240) 50%, #fff 50%);
+        }
+        &.secondPlayer {
+            background: linear-gradient(to left, rgb(247, 245, 240) 50%, #fff 50%);
+        }
 }
 
 .unactive {

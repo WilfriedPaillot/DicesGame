@@ -11278,6 +11278,12 @@ section {
   top: 40%;
   transform: translateY(-50%);
 }
+section.firstPlayer {
+  background: linear-gradient(to right, #f7f5f0 50%, #fff 50%);
+}
+section.secondPlayer {
+  background: linear-gradient(to left, #f7f5f0 50%, #fff 50%);
+}
 
 .unactive {
   color: gainsboro;
