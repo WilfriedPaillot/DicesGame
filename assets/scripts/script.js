@@ -83,11 +83,19 @@ function resetAll() {
 function changePlayerStyle() {
 
     if (activePlayer === 1 ) {
-        document.getElementById('player1').classList.add('actived');
-        document.getElementById('player2').classList.remove('actived');
+        document.getElementById('player2').classList.add('unactive');
+        document.getElementById('player1').classList.remove('unactive');
+        document.getElementById('bgActivePlayer').classList.add('firstPlayer');
+        document.getElementById('bgActivePlayer').classList.remove('secondPlayer');    
+        document.getElementById('player2dot').classList.add('visually-hidden');
+        document.getElementById('player1dot').classList.remove('visually-hidden');   
     }
     else {
-        document.getElementById('player1').classList.remove('actived');
-        document.getElementById('player2').classList.add('actived');
+        document.getElementById('player2').classList.remove('unactive');
+        document.getElementById('player1').classList.add('unactive');
+        document.getElementById('bgActivePlayer').classList.remove('firstPlayer');
+        document.getElementById('bgActivePlayer').classList.add('secondPlayer');
+        document.getElementById('player2dot').classList.remove('visually-hidden');
+        document.getElementById('player1dot').classList.add('visually-hidden');
     }
 }
