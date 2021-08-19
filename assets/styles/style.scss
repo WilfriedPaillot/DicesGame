@@ -4,7 +4,7 @@
 @import "../../node_modules/bootstrap/scss/variables";
 
 //Custom variables
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
 
 $font-family-sans-serif: 'Lato', sans-serif;
 
@@ -17,20 +17,20 @@ $btn-focus-box-shadow: none;
 
 
 // Additionnal custom styles
-
-
-
 body {
     height: 100vh;
     width: 100%;
     position: relative;
+    background: rgb(130,80,50);
+    background: radial-gradient(circle, rgba(130,80,50,1) 60%, rgba(159,116,64,1) 85%, rgba(173,155,135,1) 100%);
 }
 
-.container {
+.container-fluid {
     position: relative;
-    // background: #000;
+    width: 95%;
     height: 90%;
     top: 50%;
+    background: rgb(247, 245, 240);
     transform: translateY(-50%);
         &.firstPlayer {
             background: linear-gradient(to right, rgb(247, 245, 240) 50%, #fff 50%);
@@ -40,18 +40,55 @@ body {
         }
 }
 
+.players {
+    font-size: calc(1.75rem + 2vw);
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.globalScores {
+        font-size: calc(2.5rem + 2vw);
+        font-weight: 100;
+        color: crimson;
+}
+
+.roundScores {
+    font-size: calc(1.50rem + 2vw);
+    font-weight: 300;
+    color: white;
+}
+
+.roundScores__titles {
+    font-size: calc(1rem + 1vw);
+    font-weight: 300;
+    color: black;
+}
+
 .unactive {
     color: gainsboro;
 }
 
+@media screen and (min-width: 998px) {
+    .roundScores__parent {
+        position: relative;
+        padding: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        line-height: 1;
+        background: crimson;
+        text-align: center;
+    }
+}
+
+
 .dice {
-    position: relative;
+    //position: relative;
     width: 100px;
     height: 100px;
     border-radius: 10px;
     background: #f1f1f1;
     box-shadow: 0 0 10px rgba(0,0,0,0.25);
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -40%);
+    //top: 40%;
+    //left: 50%;
+    //transform: translate(-50%, -40%);
 }
