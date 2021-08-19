@@ -68,6 +68,10 @@ body {
     color: gainsboro;
 }
 
+.btn {
+    font-size: calc(1.5rem + 1vw);
+}
+
 @media screen and (min-width: 998px) {
     .roundScores__parent {
         position: relative;
@@ -75,7 +79,7 @@ body {
         padding-left: 25px;
         padding-right: 25px;
         line-height: 1;
-        background: crimson;
+        background: rgb(206, 10, 49);
         text-align: center;
     }
 }
