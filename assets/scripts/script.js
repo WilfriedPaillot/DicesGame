@@ -19,7 +19,6 @@ const newGame = document.getElementById('newGame').addEventListener('click', () 
 // Roll dice function with roundScore's increment 
 
 const roll = document.getElementById('roll').addEventListener('click', () => {
-    //const diceValue = Math.ceil(Math.random() * 6);
     rollDice();
     if (diceValue > 1) {
         
@@ -45,8 +44,7 @@ const roll = document.getElementById('roll').addEventListener('click', () => {
             document.getElementById("roundScore2").innerHTML = roundScore2;
             nextPlayer();
             changePlayerStyle();
-        }}
-        // document.getElementById("value").innerHTML = diceValue;    
+        }}   
     })
 
 // Hold function with globalScore's increment
