@@ -4,6 +4,7 @@ let roundScore2 = 0;
 let globalScore1 = 0;
 let globalScore2 = 0;
 let activePlayer;
+let diceValue;
 
 // New game function
 const newGame = document.getElementById('newGame').addEventListener('click', () => {
@@ -18,8 +19,8 @@ const newGame = document.getElementById('newGame').addEventListener('click', () 
 // Roll dice function with roundScore's increment 
 
 const roll = document.getElementById('roll').addEventListener('click', () => {
-    const diceValue = Math.ceil(Math.random() * 6);
-
+    //const diceValue = Math.ceil(Math.random() * 6);
+    rollDice();
     if (diceValue > 1) {
         
         if (activePlayer === 1 ) {
@@ -45,7 +46,7 @@ const roll = document.getElementById('roll').addEventListener('click', () => {
             nextPlayer();
             changePlayerStyle();
         }}
-        document.getElementById("value").innerHTML = diceValue;    
+        // document.getElementById("value").innerHTML = diceValue;    
     })
 
 // Hold function with globalScore's increment
@@ -105,4 +106,66 @@ function winnerIs() {
         nextPlayer();
         changePlayerStyle();
     }
+}
+
+function rollDice() {
+    const diceValues = [
+    // First dice
+    `<span class="diceFace diceFace1" id="diceFace1">
+        <p class="diceDot" id=""></p>
+    </span>`,
+    // Second dice
+    `<span class="diceFace diceFace2" id="diceFace2">
+        <p class="diceDot" id=""></p>
+        <p class="diceDot" id=""></p>
+    </span>`,
+    // Third dice
+    `<span class="diceFace diceFace3" id="diceFace3">
+        <p class="diceDot" id=""></p>
+        <p class="diceDot" id=""></p>
+        <p class="diceDot" id=""></p>
+    </span>`,
+    // Fourth dice
+    `<span class="diceFace diceFace4" id="diceFace4">
+        <div class="diceCol">
+            <p class="diceDot" id=""></p>
+            <p class="diceDot" id=""></p>                                    
+        </div>
+        <div class="diceCol">
+            <p class="diceDot" id=""></p>
+            <p class="diceDot" id=""></p>                                    
+        </div>
+    </span>`,
+    // Fiwth dice
+    `<span class="diceFace diceFace5" id="diceFace5">
+        <div class="diceCol">
+            <p class="diceDot" id=""></p>
+            <p class="diceDot" id=""></p>                                    
+        </div>
+    <div class="diceCol">
+        <p class="diceDot" id=""></p>
+    </div>
+    <div class="diceCol">
+        <p class="diceDot" id=""></p>
+        <p class="diceDot" id=""></p>                                    
+    </div>
+    </span>`,
+    // Sixth dice
+    `<span class="diceFace diceFace6" id="diceFace6">
+    <div class="diceCol">
+        <p class="diceDot" id=""></p>
+        <p class="diceDot" id=""></p>                                    
+        <p class="diceDot" id=""></p>                                    
+    </div>
+    <div class="diceCol">
+        <p class="diceDot" id=""></p>
+        <p class="diceDot" id=""></p>                                    
+        <p class="diceDot" id=""></p>                                    
+    </div>
+</span>`
+];
+    const diceFace = document.getElementById('dice');
+    diceValue = Math.ceil(Math.random() * 6);
+    diceFace.innerHTML = diceValues[diceValue - 1];
+    console.log(diceFace.innerHTML);
 }

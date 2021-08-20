@@ -12264,4 +12264,77 @@ body {
   border-radius: 10px;
   background: #f1f1f1;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+p.diceDot {
+  display: block;
+  margin: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: red;
+}
+
+.diceFace {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.diceFace.diceFace1 {
+  justify-content: center;
+  align-items: center;
+}
+.diceFace.diceFace2 {
+  justify-content: space-between;
+}
+.diceFace.diceFace2 p.diceDot:nth-child(2) {
+  align-self: flex-end;
+}
+.diceFace.diceFace3 {
+  justify-content: space-between;
+}
+.diceFace.diceFace3 p.diceDot:nth-child(2) {
+  align-self: center;
+  justify-self: center;
+}
+.diceFace.diceFace3 p.diceDot:nth-child(3) {
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+.diceFace.diceFace4 .diceCol {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: space-between;
+  justify-content: space-between;
+}
+.diceFace.diceFace4 .diceCol:nth-child(2) p.diceDot {
+  align-self: flex-end;
+}
+.diceFace.diceFace5 .diceCol {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: space-between;
+  justify-content: space-between;
+}
+.diceFace.diceFace5 .diceCol:nth-child(2) {
+  justify-content: center;
+  align-items: center;
+}
+.diceFace.diceFace5 .diceCol:nth-child(3) p.diceDot {
+  align-self: flex-end;
+}
+.diceFace.diceFace6 p.diceDot {
+  align-self: space-between;
+}
+.diceFace.diceFace6 .diceCol {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: space-between;
+  justify-content: space-between;
+}
+.diceFace.diceFace6 .diceCol:nth-child(2) p.diceDot {
+  align-self: flex-end;
 }/*# sourceMappingURL=style.css.map */

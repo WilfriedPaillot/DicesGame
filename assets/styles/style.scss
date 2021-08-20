@@ -80,7 +80,7 @@ body {
 .globalScores {
         font-size: calc(2.5rem + 2vw);
         font-weight: 100;
-        color: crimson;
+        color: rgb(206, 10, 49);
 }
 
 .roundScores__parent {
@@ -118,3 +118,93 @@ body {
     background: #f1f1f1;
     box-shadow: 0 0 10px rgba(0,0,0,0.25);
 }
+
+p.diceDot {
+    display: block;
+    margin: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgb(206, 10, 49);
+}
+
+.diceFace {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    &.diceFace1 {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &.diceFace2 {
+        justify-content: space-between;
+        & p.diceDot:nth-child(2){
+            align-self: flex-end;
+        }
+    }
+
+    &.diceFace3 {
+        justify-content: space-between;
+        & p.diceDot:nth-child(2){
+            align-self: center;
+            justify-self: center;
+        }
+        & p.diceDot:nth-child(3){
+            align-self: flex-end;
+            justify-self: flex-end;
+        }
+    }
+
+    &.diceFace4 {
+            & .diceCol {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                align-items: space-between;
+                justify-content: space-between;
+            }
+            & .diceCol:nth-child(2) {
+                & p.diceDot {
+                    align-self: flex-end;
+                }
+            }
+    }
+
+    &.diceFace5 {
+        & .diceCol {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: space-between;
+            justify-content: space-between;
+        }
+        & .diceCol:nth-child(2) {
+            justify-content: center;
+            align-items: center;
+        }
+        & .diceCol:nth-child(3) {
+            & p.diceDot {
+                align-self: flex-end;
+            }
+        }
+    }
+        &.diceFace6 {
+            p.diceDot {
+                align-self: space-between;
+            }
+            & .diceCol {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                align-items: space-between;
+                justify-content: space-between;
+            }
+            & .diceCol:nth-child(2) {
+                & p.diceDot {
+                    align-self: flex-end;
+                }
+            }
+        }
+    }
