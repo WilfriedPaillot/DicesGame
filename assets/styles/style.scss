@@ -8,6 +8,9 @@
 
 $font-family-sans-serif: 'Lato', sans-serif;
 
+// Activate unable options
+$enable-negative-margins: true;
+
 // Disable default border shadow on buttons
 $btn-focus-box-shadow: none;
 
@@ -30,14 +33,42 @@ body {
     width: 95%;
     height: 90%;
     top: 50%;
-    background: rgb(247, 245, 240);
-    transform: translateY(-50%);
-        &.firstPlayer {
-            background: linear-gradient(to right, rgb(247, 245, 240) 50%, #fff 50%);
-        }
-        &.secondPlayer {
-            background: linear-gradient(to left, rgb(247, 245, 240) 50%, #fff 50%);
-        }
+}
+
+@media screen and (max-width: 998px){
+    .container-fluid {
+        background: rgb(247, 245, 240);
+        transform: translateY(-50%);
+            &.firstPlayer {
+                background: linear-gradient(to bottom, rgb(247, 245, 240) 50%, #fff 50%);
+            }
+            &.secondPlayer {
+                background: linear-gradient(to top, rgb(247, 245, 240) 50%, #fff 50%);
+            }        
+    }
+}
+
+@media screen and (min-width: 998px){
+    .container-fluid {
+        background: rgb(247, 245, 240);
+        transform: translateY(-50%);
+            &.firstPlayer {
+                background: linear-gradient(to right, rgb(247, 245, 240) 50%, #fff 50%);
+            }
+            &.secondPlayer {
+                background: linear-gradient(to left, rgb(247, 245, 240) 50%, #fff 50%);
+            }        
+    }
+
+    .roundScores__parent {
+        position: relative;
+        padding: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        line-height: 1;
+        background: rgb(206, 10, 49);
+        text-align: center;
+    }
 }
 
 .players {
@@ -50,6 +81,14 @@ body {
         font-size: calc(2.5rem + 2vw);
         font-weight: 100;
         color: crimson;
+}
+
+.roundScores__parent {
+    position: relative;
+    padding: 10px;
+    line-height: 1;
+    background: rgb(206, 10, 49);
+    text-align: center;
 }
 
 .roundScores {
@@ -72,27 +111,10 @@ body {
     font-size: calc(1.5rem + 1vw);
 }
 
-@media screen and (min-width: 998px) {
-    .roundScores__parent {
-        position: relative;
-        padding: 10px;
-        padding-left: 25px;
-        padding-right: 25px;
-        line-height: 1;
-        background: rgb(206, 10, 49);
-        text-align: center;
-    }
-}
-
-
 .dice {
-    //position: relative;
     width: 100px;
     height: 100px;
     border-radius: 10px;
     background: #f1f1f1;
     box-shadow: 0 0 10px rgba(0,0,0,0.25);
-    //top: 40%;
-    //left: 50%;
-    //transform: translate(-50%, -40%);
 }

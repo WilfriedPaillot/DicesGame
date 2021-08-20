@@ -55,14 +55,10 @@ const hold = document.getElementById('hold').addEventListener('click', () => {
         if (activePlayer === 1) {
         document.getElementById("globalScore1").innerHTML = globalScore1 += roundScore1;
         document.getElementById("roundScore1").innerHTML = roundScore1 = 0;
-        // nextPlayer();
-        // changePlayerStyle();
         }
         else {
         document.getElementById("globalScore2").innerHTML = globalScore2 += roundScore2;
         document.getElementById("roundScore2").innerHTML = roundScore2 = 0;
-        // nextPlayer();
-        // changePlayerStyle();
         }
     winnerIs();
 })
