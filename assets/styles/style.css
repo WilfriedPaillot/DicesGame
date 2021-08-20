@@ -12227,7 +12227,7 @@ body {
 .globalScores {
   font-size: calc(2.5rem + 2vw);
   font-weight: 100;
-  color: crimson;
+  color: #ce0a31;
 }
 
 .roundScores__parent {
@@ -12258,6 +12258,14 @@ body {
   font-size: calc(1.5rem + 1vw);
 }
 
+img.bi-svg {
+  height: auto;
+  width: calc(1.5rem + 1vw);
+}
+img.bi-svg.dot {
+  width: calc(1.85rem + 1vw);
+}
+
 .dice {
   width: 100px;
   height: 100px;
@@ -12272,7 +12280,7 @@ p.diceDot {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: red;
+  background: #ce0a31;
 }
 
 .diceFace {
