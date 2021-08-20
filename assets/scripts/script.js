@@ -46,25 +46,25 @@ const roll = document.getElementById('roll').addEventListener('click', () => {
             changePlayerStyle();
         }}
         document.getElementById("value").innerHTML = diceValue;    
-        //console.log(activePlayer);
     })
 
 // Hold function with globalScore's increment
 
 const hold = document.getElementById('hold').addEventListener('click', () => {
-    if (activePlayer === 1) {
+
+        if (activePlayer === 1) {
         document.getElementById("globalScore1").innerHTML = globalScore1 += roundScore1;
         document.getElementById("roundScore1").innerHTML = roundScore1 = 0;
-        nextPlayer();
-        changePlayerStyle();
-    }
-    else {
+        // nextPlayer();
+        // changePlayerStyle();
+        }
+        else {
         document.getElementById("globalScore2").innerHTML = globalScore2 += roundScore2;
-        document.getElementById("roundScore2").innerHTML = roundScore2 = 0;    
-        nextPlayer();
-        changePlayerStyle();  
-    }
-    
+        document.getElementById("roundScore2").innerHTML = roundScore2 = 0;
+        // nextPlayer();
+        // changePlayerStyle();
+        }
+    winnerIs();
 })
 
 // Function to change player
@@ -97,5 +97,16 @@ function changePlayerStyle() {
         document.getElementById('bgActivePlayer').classList.add('secondPlayer');
         document.getElementById('player2dot').classList.remove('visually-hidden');
         document.getElementById('player1dot').classList.add('visually-hidden');
+    }
+}
+
+function winnerIs() {
+    if (globalScore2 >= 100 || globalScore1 >= 100) {
+        alert(`Le joueur ${activePlayer} a gagné cette partie !`);
+        resetAll();
+    }
+    else {
+        nextPlayer();
+        changePlayerStyle();
     }
 }
