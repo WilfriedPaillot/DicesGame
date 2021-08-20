@@ -170,14 +170,41 @@ p.diceDot {
                     align-self: flex-end;
                 }
             }
-            
-        //     & p.diceDot:nth-child(2){
-        //         align-self: flex-end;
-        // }
     }
-}
 
-
-
-
-
+    &.diceFace5 {
+        & .diceCol {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: space-between;
+            justify-content: space-between;
+        }
+        & .diceCol:nth-child(2) {
+            justify-content: center;
+            align-items: center;
+        }
+        & .diceCol:nth-child(3) {
+            & p.diceDot {
+                align-self: flex-end;
+            }
+        }
+    }
+        &.diceFace6 {
+            p.diceDot {
+                align-self: space-between;
+            }
+            & .diceCol {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                align-items: space-between;
+                justify-content: space-between;
+            }
+            & .diceCol:nth-child(2) {
+                & p.diceDot {
+                    align-self: flex-end;
+                }
+            }
+        }
+    }

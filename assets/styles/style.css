@@ -12310,4 +12310,31 @@ p.diceDot {
 }
 .diceFace.diceFace4 .diceCol:nth-child(2) p.diceDot {
   align-self: flex-end;
+}
+.diceFace.diceFace5 .diceCol {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: space-between;
+  justify-content: space-between;
+}
+.diceFace.diceFace5 .diceCol:nth-child(2) {
+  justify-content: center;
+  align-items: center;
+}
+.diceFace.diceFace5 .diceCol:nth-child(3) p.diceDot {
+  align-self: flex-end;
+}
+.diceFace.diceFace6 p.diceDot {
+  align-self: space-between;
+}
+.diceFace.diceFace6 .diceCol {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: space-between;
+  justify-content: space-between;
+}
+.diceFace.diceFace6 .diceCol:nth-child(2) p.diceDot {
+  align-self: flex-end;
 }/*# sourceMappingURL=style.css.map */
