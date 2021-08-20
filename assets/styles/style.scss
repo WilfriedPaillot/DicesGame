@@ -1,0 +1,210 @@
+// Required elements loaded for override
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/variables";
+
+//Custom variables
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
+$font-family-sans-serif: 'Lato', sans-serif;
+
+// Activate unable options
+$enable-negative-margins: true;
+
+// Disable default border shadow on buttons
+$btn-focus-box-shadow: none;
+
+
+// Add all BS natives and overriden styles on my custom.css
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+// Additionnal custom styles
+body {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: rgb(130,80,50);
+    background: radial-gradient(circle, rgba(130,80,50,1) 60%, rgba(159,116,64,1) 85%, rgba(173,155,135,1) 100%);
+}
+
+.container-fluid {
+    position: relative;
+    width: 95%;
+    height: 90%;
+    top: 50%;
+}
+
+@media screen and (max-width: 998px){
+    .container-fluid {
+        background: rgb(247, 245, 240);
+        transform: translateY(-50%);
+            &.firstPlayer {
+                background: linear-gradient(to bottom, rgb(247, 245, 240) 50%, #fff 50%);
+            }
+            &.secondPlayer {
+                background: linear-gradient(to top, rgb(247, 245, 240) 50%, #fff 50%);
+            }        
+    }
+}
+
+@media screen and (min-width: 998px){
+    .container-fluid {
+        background: rgb(247, 245, 240);
+        transform: translateY(-50%);
+            &.firstPlayer {
+                background: linear-gradient(to right, rgb(247, 245, 240) 50%, #fff 50%);
+            }
+            &.secondPlayer {
+                background: linear-gradient(to left, rgb(247, 245, 240) 50%, #fff 50%);
+            }        
+    }
+
+    .roundScores__parent {
+        position: relative;
+        padding: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        line-height: 1;
+        background: rgb(206, 10, 49);
+        text-align: center;
+    }
+}
+
+.players {
+    font-size: calc(1.75rem + 2vw);
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.globalScores {
+        font-size: calc(2.5rem + 2vw);
+        font-weight: 100;
+        color: rgb(206, 10, 49);
+}
+
+.roundScores__parent {
+    position: relative;
+    padding: 10px;
+    line-height: 1;
+    background: rgb(206, 10, 49);
+    text-align: center;
+}
+
+.roundScores {
+    font-size: calc(1.50rem + 2vw);
+    font-weight: 300;
+    color: white;
+}
+
+.roundScores__titles {
+    font-size: calc(1rem + 1vw);
+    font-weight: 300;
+    color: black;
+}
+
+.unactive {
+    color: gainsboro;
+}
+
+.btn {
+    font-size: calc(1.5rem + 1vw);
+}
+
+.dice {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background: #f1f1f1;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+p.diceDot {
+    display: block;
+    margin: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgb(206, 10, 49);
+}
+
+.diceFace {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    &.diceFace1 {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &.diceFace2 {
+        justify-content: space-between;
+        & p.diceDot:nth-child(2){
+            align-self: flex-end;
+        }
+    }
+
+    &.diceFace3 {
+        justify-content: space-between;
+        & p.diceDot:nth-child(2){
+            align-self: center;
+            justify-self: center;
+        }
+        & p.diceDot:nth-child(3){
+            align-self: flex-end;
+            justify-self: flex-end;
+        }
+    }
+
+    &.diceFace4 {
+            & .diceCol {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                align-items: space-between;
+                justify-content: space-between;
+            }
+            & .diceCol:nth-child(2) {
+                & p.diceDot {
+                    align-self: flex-end;
+                }
+            }
+    }
+
+    &.diceFace5 {
+        & .diceCol {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: space-between;
+            justify-content: space-between;
+        }
+        & .diceCol:nth-child(2) {
+            justify-content: center;
+            align-items: center;
+        }
+        & .diceCol:nth-child(3) {
+            & p.diceDot {
+                align-self: flex-end;
+            }
+        }
+    }
+        &.diceFace6 {
+            p.diceDot {
+                align-self: space-between;
+            }
+            & .diceCol {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                align-items: space-between;
+                justify-content: space-between;
+            }
+            & .diceCol:nth-child(2) {
+                & p.diceDot {
+                    align-self: flex-end;
+                }
+            }
+        }
+    }

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Dices game</title>
+</head>
+<body>
+
+    <div id="bgActivePlayer" class="container-fluid">
+
+        <div class="row">
+            <button type="button" class="btn" id="newGame"><i class="bi bi-plus-circle text-danger me-3 "></i>New Game</button>
+        </div>   
+        
+        <div class="row h-100">
+
+            <div class="col-12 col-lg-4 d-flex flex-column justify-content-end justify-content-lg-start mt-n4 mt-lg-3">
+                <div class="d-flex justify-content-around align-items-center flex-lg-column">
+                    <h1 class="players" id="player1">Player 1<i class="bi bi-dot text-danger" id="player1dot"></i></h1>
+                    <span class="globalScores" id="globalScore1">0</span>                    
+                </div>
+
+                <div class="d-flex flex-column align-items-center order-0 flex-lg-row justify-content-lg-center flex-lg-grow-1">
+                    <div class="roundScores__parent w-50">
+                        <p class="roundScores__titles">CURRENT</p>
+                        <span class="roundScores" id="roundScore1">0</span>                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="section" class="col-12 col-lg-4 d-flex justify-content-center">
+                <section class="d-flex align-items-center flex-lg-column py-lg-5">
+                    <div id="dice" class="dice my-lg-5">
+                        <!-- Here come one of the diceValues in array of rollDice function  -->
+                    </div>
+                    <div class="buttons d-flex flex-column justify-content-center align-items-center flex-lg-grow-1 mb-3">
+                        <button class="btn" id="roll"><i class="bi bi-arrow-repeat text-danger me-3"></i>Roll dice</button>
+                        <button class="btn" id="hold"><i class="bi bi-box-arrow-in-down text-danger me-3"></i>Hold</button>                    
+                    </div>                    
+                </section>
+            </div>
+
+
+            <div class="col-12 col-lg-4 d-flex flex-column justify-content-start mt-lg-3">
+                <div class="d-flex justify-content-around align-items-center order-1 flex-lg-column order-lg-0 pb-3 mb-5 mb-lg-3">
+                    <h1 class="players" id="player2">Player 2<i class="bi bi-dot text-danger" id="player2dot"></i></h1>
+                    <span class="globalScores " id="globalScore2">0</span>                    
+                </div>
+
+                <div class="d-flex flex-column align-items-center order-0 flex-lg-row justify-content-lg-center flex-lg-grow-1">
+                    <div class="roundScores__parent w-50">
+                        <p class="roundScores__titles">CURRENT</p>
+                        <span class="roundScores" id="roundScore2">0</span>                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/scripts/script.js"></script>
+</body>
+</html>
