@@ -80,7 +80,7 @@ body {
 .globalScores {
         font-size: calc(2.5rem + 2vw);
         font-weight: 100;
-        color: crimson;
+        color: rgb(206, 10, 49);
 }
 
 .roundScores__parent {
@@ -125,7 +125,7 @@ p.diceDot {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background: red;
+    background: rgb(206, 10, 49);
 }
 
 .diceFace {
