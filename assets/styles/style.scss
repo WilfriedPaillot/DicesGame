@@ -111,6 +111,14 @@ body {
     font-size: calc(1.5rem + 1vw);
 }
 
+img.bi-svg {
+    height: auto;
+    width: calc(1.5rem + 1vw);
+    &.dot {
+        width: calc(1.85rem + 1vw);
+    }
+}
+
 .dice {
     width: 100px;
     height: 100px;
