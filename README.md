@@ -47,4 +47,9 @@ npm install bootstrap-icons
 ## Rendu final
 ![Dices game screenshot](./assets/img/dicesGame.png?raw=true "DicesGame")
 
+## Correction
 
+> "Résultat excellent, jeu fluide et rapide, bonne utilisation de Git/Github "
+>
+> Note: <cite>19 / 20</cite>
+>
